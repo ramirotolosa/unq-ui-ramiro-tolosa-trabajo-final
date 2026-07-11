@@ -1,0 +1,22 @@
+.button {
+  width: 80%;
+  padding: 16px;
+  border: none;
+  border-radius: 8px;
+  background: var(--app-yellow);
+  color: var(--app-blue);
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+.button:active {
+  transform: translateY(2px);
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

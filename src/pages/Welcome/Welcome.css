@@ -1,0 +1,32 @@
+.welcome {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 48px;
+}
+
+.welcome__logo {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+}
+
+@media (min-width: 768px) {
+  .welcome__logo {
+    max-width: 500px;
+  }
+
+    .welcome {
+    gap: 72px;
+  }
+
+}
+
+@media (min-width: 1440px) {
+    .welcome {
+    gap: 96px;
+  }
+
+}

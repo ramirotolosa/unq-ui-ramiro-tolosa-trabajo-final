@@ -36,13 +36,14 @@ function PlayerNameForm() {
     if (!touched) setTouched(true);
   };
 
-  const handlePlayClick = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
     setPlayerName(name.trim());
     navigate(ROUTES.GAME);
   };
 
   return (
-    <div className="player-name-form">
+    <form className="player-name-form" onSubmit={handleSubmit}>
       <TextInput
         label="Nombre del jugador"
         placeholder="Ingrese aquí su nombre"
@@ -50,8 +51,8 @@ function PlayerNameForm() {
         onChange={handleChange}
       />
       <ErrorMessage message={touched ? error : null} />
-      <Button text="JUGAR" onClick={handlePlayClick} disabled={!isValid} />
-    </div>
+      <Button text="JUGAR" type="submit" disabled={!isValid} />
+    </form>
   );
 }
 

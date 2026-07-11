@@ -2,7 +2,8 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
-  width: 80%;
+  width: 100%;
+  max-width: 265px;
 }
 
 .text-input__label {
@@ -35,4 +36,11 @@
 .text-input__field:focus {
   outline: none;
   border-color: var(--app-yellow);
+}
+
+@media (min-width: 768px) {
+  .text-input {
+    width: 100%;
+    max-width: 365px;
+  }
 }

@@ -10,3 +10,5 @@ export const GAME_STATUS = {
   PLAYING: 'playing',
   FINISHED: 'finished',
 };
+
+export const TURN_DURATION_SECONDS = 15;

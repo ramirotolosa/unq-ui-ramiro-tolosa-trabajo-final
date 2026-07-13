@@ -10,7 +10,7 @@
 .leaderboard__table {
   width: 100%;
   max-width: 265px;
-  min-height: 448px;
+  /* min-height: 448px; */
   background: var(--app-yellow);
   border-radius: 8px;
   border-collapse: collapse;

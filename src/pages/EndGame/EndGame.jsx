@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useGame } from '../../hooks/useGame';
 import { ROUTES } from '../../utils/constants';
-import { saveScore } from '../../utils/leaderboardStorage';
+
 import Button from '../../components/Button/Button';
 import WordChain from '../Game/WordChain/WordChain';
 import './EndGame.css';
@@ -10,10 +10,6 @@ import './EndGame.css';
 function EndGame() {
   const navigate = useNavigate();
   const { playerName, score, wordChain, playAgain, resetGame } = useGame();
-
-  useEffect(() => {
-    saveScore(playerName, score);
-  }, []);
 
   const handlePlayAgain = () => {
     playAgain();

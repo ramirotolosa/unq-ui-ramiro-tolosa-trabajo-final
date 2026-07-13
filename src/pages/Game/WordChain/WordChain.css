@@ -31,3 +31,9 @@
   color: var(--app-yellow);
   text-transform: uppercase;
 }
+
+@media (min-width: 768px) {
+  .word-chain {
+    max-width: 365px;
+  }
+}

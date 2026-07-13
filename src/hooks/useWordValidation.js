@@ -8,7 +8,7 @@ function getChainingError(word, wordChain) {
   const requiredLetter = lastWord.at(-1).toLowerCase();
   const firstLetter = word.at(0).toLowerCase();
 
-  if (firstLetter !== requiredLetter) return `La palabra ingresada no comienza con "${requiredLetter.toUpperCase()}"`;
+  if (firstLetter !== requiredLetter) return `¡La palabra ingresada no comienza con "${requiredLetter.toUpperCase()}"!`;
 
   return null;
 }

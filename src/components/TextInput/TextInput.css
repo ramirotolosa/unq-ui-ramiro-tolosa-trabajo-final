@@ -38,6 +38,11 @@
   border-color: var(--app-yellow);
 }
 
+.text-input__field:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 @media (min-width: 768px) {
   .text-input {
     width: 100%;

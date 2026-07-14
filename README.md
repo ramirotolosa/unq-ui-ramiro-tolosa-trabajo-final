@@ -1,16 +1,60 @@
-# React + Vite
+# Palabras Encadenadas
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Juego de palabras encadenadas desarrollado en React para el Trabajo Final Integrador de la materia Construcción de Interfaces de Usuario de la UNQ.
 
-Currently, two official plugins are available:
+## Requisitos previos
+- [Node.js](https://nodejs.org/es) (v18 o superior recomendado)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Instalación del proyecto
 
-## React Compiler
+1. Clonar el repositorio:
+```bash
+   git clone <url-del-repositorio>
+   cd unq-ui-ramiro-tolosa-trabajo-final
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+2. Instalar las dependencias:
+```bash
+   npm install
+```
 
-## Expanding the ESLint configuration
+## Cómo ejecutar el proyecto localmente
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Generar la build de producción:
+
+```bash
+    npm run build
+```
+
+Y luego levantar un servidor local para previsualizarla:
+
+```bash
+    npm run preview
+```
+
+La aplicación va a estar disponible en la URL que indique la terminal (por defecto `http://localhost:4173`).
+
+## Requisitos implementados
+Se implementaron los requisitos minimos para que la aplicacion permita:
+- Jugar una partida
+- Ingresar palabras.
+- Ver el puntaje acumulado.
+- Visualizar la cadena de palabras válidas ingresadas.
+- Ver el tiempo restante del turno.
+- Validar las palabras utilizando la API provista.
+- Informar cuando una palabra:
+    - No existe.
+    - Ya fue utilizada.
+    - No respeta la cadena de palabras.
+- Mostrar claramente cuándo la partida ha finalizado.
+- Mostrar la cantidad de palabras válidas encadenadas durante la partida.
+- Mostrar el puntaje final.
+
+Además, se implementaron los siguientes requisitos extra:
+- Interfaz Responsive
+- Posibilidad de jugar más de una partida
+- Un leaderboard local con los mejores 10 puntajes obtenidos.
+
+
+
+

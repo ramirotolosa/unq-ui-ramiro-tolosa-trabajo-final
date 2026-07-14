@@ -7,10 +7,18 @@
   gap: 32px;
 }
 
+.leaderboard__message {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--app-yellow);
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0;
+}
+
 .leaderboard__table {
   width: 100%;
   max-width: 265px;
-  /* min-height: 448px; */
   background: var(--app-yellow);
   border-radius: 8px;
   border-collapse: collapse;
@@ -37,14 +45,9 @@
   border-right: 2px solid var(--app-blue);
 }
 
-
-
-
-.leaderboard__message {
-  font-size: 20px;
-  font-weight: 700;
-  color: var(--app-yellow);
-  text-align: center;
-  text-transform: uppercase;
-  margin: 0;
+@media (min-width: 768px) {
+  .leaderboard__table{
+    width: 100%;
+    max-width: 365px;
+  }
 }

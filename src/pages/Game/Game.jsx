@@ -2,6 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import { useGame } from '../../hooks/useGame';
 import useTimer from '../../hooks/useTimer';
 import useWordValidation from '../../hooks/useWordValidation';
+import { saveScore } from '../../utils/leaderboardStorage';
 import { GAME_STATUS, TURN_DURATION_SECONDS, ROUTES } from '../../utils/constants';
 import GameStats from './GameStats/GameStats';
 import GameStatusInfo from './GameStatusInfo/GameStatusInfo';
@@ -11,11 +12,12 @@ import './Game.css';
 
 function Game() {
   const navigate = useNavigate();
-  const { score, wordChain, gameStatus, addWord, finishGame } = useGame();
+  const { score, wordChain, gameStatus, addWord, finishGame, playerName } = useGame();
   const isPlaying = gameStatus === GAME_STATUS.PLAYING;
 
   const handleExpire = () => {
     finishGame();
+    saveScore(playerName, score);
     navigate(ROUTES.END_GAME);
   };
 

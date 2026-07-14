@@ -1,0 +1,15 @@
+.word-input-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.word-input-form .text-input__field {
+  text-transform: uppercase;
+}
+
+.word-input-form .text-input__field::placeholder {
+  text-transform: none;
+}

@@ -4,10 +4,12 @@ import './Welcome.css';
 
 function Welcome() {
   return (
-    <div className="welcome">
-      <img className="welcome__logo" src={logo} alt="Palabras Encadenadas" />
-      <PlayerNameForm />
-    </div>
+    <div className="welcome-container">
+      <div className="welcome">
+        <img className="welcome__logo" src={logo} alt="Palabras Encadenadas" />
+        <PlayerNameForm />
+      </div>
+    </div>  
   );
 }
 

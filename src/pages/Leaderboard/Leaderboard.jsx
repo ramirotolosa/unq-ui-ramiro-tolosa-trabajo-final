@@ -22,33 +22,35 @@ function Leaderboard() {
   const emptyRowsCount = MAX_ROWS - scores.length;
 
   return (
-    <div className="leaderboard">
-      <p className="leaderboard__message">Top 10 mejores puntajes</p>
-      <table className="leaderboard__table">
-        <thead>
-          <tr>
-            <th className="leaderboard__header">JUGADOR</th>
-            <th className="leaderboard__header">PUNTAJE</th>
-          </tr>
-        </thead>
-        <tbody>
-          {scores.map((entry, index) => (
-            <tr key={index}>
-              <td className="leaderboard__cell">{entry.playerName}</td>
-              <td className="leaderboard__cell">{entry.score}</td>
+    <div className="leaderboard-container">
+      <div className="leaderboard">
+        <p className="leaderboard__message">Top 10 mejores puntajes</p>
+        <table className="leaderboard__table">
+          <thead>
+            <tr>
+              <th className="leaderboard__header">JUGADOR</th>
+              <th className="leaderboard__header">PUNTAJE</th>
             </tr>
-          ))}
-          {Array.from({ length: emptyRowsCount }).map((_, index) => (
-            <tr key={`empty-${index}`}>
-              <td className="leaderboard__cell">&nbsp;</td>
-              <td className="leaderboard__cell">&nbsp;</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {scores.map((entry, index) => (
+              <tr key={index}>
+                <td className="leaderboard__cell">{entry.playerName}</td>
+                <td className="leaderboard__cell">{entry.score}</td>
+              </tr>
+            ))}
+            {Array.from({ length: emptyRowsCount }).map((_, index) => (
+              <tr key={`empty-${index}`}>
+                <td className="leaderboard__cell">&nbsp;</td>
+                <td className="leaderboard__cell">&nbsp;</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
 
-      <Button text="VOLVER" onClick={handleGoBack} />
-    </div>
+        <Button text="VOLVER" onClick={handleGoBack} />
+      </div>
+    </div>  
   );
 }
 

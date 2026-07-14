@@ -26,26 +26,28 @@ function EndGame() {
   };
 
   return (
-    <div className="end-game">
-      <p className="end-game__message">¡Se acabó el tiempo, {playerName}!</p>
+    <div className="end-game-container">
+      <div className="end-game">
+        <p className="end-game__message">¡Se acabó el tiempo, {playerName}!</p>
 
-      <div className="end-game__stats">
-        <p className="end-game__stat">
-          Puntaje final: <span className="end-game__stat-value">{score}</span>
-        </p>
-        <p className="end-game__stat">
-          Total encadenadas: <span className="end-game__stat-value">{wordChain.length}</span>
-        </p>
+        <div className="end-game__stats">
+          <p className="end-game__stat">
+            Puntaje final: <span className="end-game__stat-value">{score}</span>
+          </p>
+          <p className="end-game__stat">
+            Total encadenadas: <span className="end-game__stat-value">{wordChain.length}</span>
+          </p>
+        </div>
+
+        <WordChain wordChain={wordChain} />
+
+        <div className="end-game__actions">
+          <Button text="JUGAR OTRA VEZ" onClick={handlePlayAgain} />
+          <Button text="CAMBIAR JUGADOR" onClick={handleChangePlayer} />
+          <Button text="LEADERBOARD" onClick={handleGoToLeaderboard} />
+        </div>
       </div>
-
-      <WordChain wordChain={wordChain} />
-
-      <div className="end-game__actions">
-        <Button text="JUGAR OTRA VEZ" onClick={handlePlayAgain} />
-        <Button text="CAMBIAR JUGADOR" onClick={handleChangePlayer} />
-        <Button text="LEADERBOARD" onClick={handleGoToLeaderboard} />
-      </div>
-    </div>
+    </div>  
   );
 }
 

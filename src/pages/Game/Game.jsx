@@ -33,15 +33,17 @@ function Game() {
   };
 
   return (
-    <div className="game">
-      <GameStats score={score} chainCount={wordChain.length} timeLeft={timeLeft} />
-      <GameStatusInfo isPlaying={isPlaying} lastWord={lastWord} nextLetter={nextLetter} />
-      <WordInputForm
-        onValidWord={handleValidWord}
-        validateWord={validateWord}
-        isValidating={isValidating}
-      />
-      <WordChain wordChain={wordChain} />
+    <div className="game-container">
+      <div className="game">
+        <GameStats score={score} chainCount={wordChain.length} timeLeft={timeLeft} />
+        <GameStatusInfo isPlaying={isPlaying} lastWord={lastWord} nextLetter={nextLetter} />
+        <WordInputForm
+          onValidWord={handleValidWord}
+          validateWord={validateWord}
+          isValidating={isValidating}
+        />
+        <WordChain wordChain={wordChain} />
+      </div>
     </div>
   );
 }
